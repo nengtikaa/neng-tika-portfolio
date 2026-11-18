@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.dev.vars*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials*.json
+service-account*.json
+.npmrc
+.pypirc
+.git-credentials
+
+# Tooling / build artifacts
+.wrangler/
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db

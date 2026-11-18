@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neng Tika Adianti — Student, Web Developer &amp; UI Designer</title>
+  <meta name="description" content="Portfolio pribadi Neng Tika Adianti, siswi Rekayasa Perangkat Lunak SMKN 3 Banjar. Web development, UI design, dan project digital." />
+  <meta name="theme-color" content="#F7F2F8" id="theme-color" />
+  <meta property="og:title" content="Neng Tika Adianti — Portfolio" />
+  <meta property="og:description" content="Student • Web Developer • UI Designer. Rekayasa Perangkat Lunak Student di SMKN 3 Banjar." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2315101d'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' font-style='italic' text-anchor='middle' fill='%23b99ad1'%3EN%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Dancing+Script:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var theme = 'light';
+      try {
+        var saved = localStorage.getItem('nta-theme');
+        theme = saved || 'light';
+      } catch (error) {
+        theme = 'light';
+      }
+      root.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'light' ? '#F7F2F8' : '#15101D');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Langsung ke konten</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-row">
+      <a class="brand" href="#home" aria-label="N Neng Tika Adianti — kembali ke atas">
+        <span class="brand-mark" aria-hidden="true">N<i class="brand-spark">✦</i></span>
+        <span class="brand-name">Neng Tika Adianti</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#about" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>About</span></a>
+        <a href="#education" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Education</span></a>
+        <a href="#skills" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Skills</span></a>
+        <a href="#projects" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Projects</span></a>
+        <a href="#achievement" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Achievement</span></a>
+        <a href="#organization" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Organization</span></a>
+        <a href="#contact" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Contact</span></a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="square-btn theme-toggle" type="button" data-theme-toggle aria-label="Aktifkan mode gelap" title="Ganti tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z" />
+          </svg>
+        </button>
+
+        <button class="square-btn menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="nav-panel" aria-label="Buka menu navigasi">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-panel" id="nav-panel" data-nav-panel>
+    <div class="panel-inner">
+      <nav aria-label="Navigasi mobile">
+        <ul>
+          <li><a href="#about" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>About</span></a></li>
+          <li><a href="#education" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Education</span></a></li>
+          <li><a href="#skills" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Skills</span></a></li>
+          <li><a href="#projects" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Projects</span></a></li>
+          <li><a href="#achievement" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Achievement</span></a></li>
+          <li><a href="#organization" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Organization</span></a></li>
+          <li><a href="#contact" data-nav><i class="nav-star" aria-hidden="true">✦</i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="panel-foot">
+        <p>Ciamis, Jawa Barat</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="hero-panel" data-reveal>
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Portfolio 2026 · Ciamis</p>
+            <h1 class="hero-title">Neng Tika <em>Adianti</em></h1>
+            <p class="hero-lead">UI Designer &amp; Web Developer</p>
+            <p class="hero-desc">Membangun antarmuka web yang sederhana, menarik, dan nyaman digunakan.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">Lihat Karya <span class="btn-arrow">→</span></a>
+              <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-frame">
+              <figure class="media portrait" data-label="neng.jpeg">
+                <img src="assets/image/neng.png" alt="Foto profil Neng Tika Adianti" fetchpriority="high" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">NTA</span><span class="ph-name">neng.jpeg</span></span>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">a little about me</span>
+          <h2 class="sec-title">About <em>Me</em></h2>
+          <p class="sec-desc">Sedikit cerita tentang siapa saya, apa yang saya pelajari, dan bagaimana saya bekerja.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <div class="about-journal" data-reveal>
+          <div class="journal-head">
+            <span class="journal-crest" aria-hidden="true">✧</span>
+            <div class="journal-copy">
+              <span class="journal-kicker">dear diary,</span>
+              <h3>A little about me</h3>
+            </div>
+            <span class="journal-ribbon" aria-hidden="true">✦</span>
+          </div>
+
+          <div class="journal-pages">
+            <div class="journal-page story-page">
+              <p class="lead">Siswi SMKN 3 Banjar, jurusan Rekayasa Perangkat Lunak. Fokus pada web development dan UI design.</p>
+              <p>Pernah menjadi Ketua Seni Tari SMKN 3 Banjar. Aktif di organisasi, Teaching Factory (TEFA), dan berbagai perlombaan.</p>
+            </div>
+
+            <aside class="journal-page info-page">
+              <h4 class="card-label">Informasi</h4>
+              <dl class="info-list">
+                <div><dt>Sekolah</dt><dd>SMKN 3 Banjar</dd></div>
+                <div><dt>Major</dt><dd>Rekayasa Perangkat Lunak</dd></div>
+                <div><dt>Asal</dt><dd>Ciamis, Jawa Barat</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section alt" id="education">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">my learning path</span>
+          <h2 class="sec-title"><em>Education</em></h2>
+          <p class="sec-desc">Perjalanan pendidikan yang membentuk dasar kemampuan akademik dan teknis saya.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <div class="edu-scrapbook" data-reveal>
+          <div class="scrap-head">
+            <span class="scrap-crest" aria-hidden="true">✧</span>
+            <div class="scrap-copy">
+              <span class="scrap-kicker">three little chapters</span>
+              <h3>Learning path</h3>
+            </div>
+            <span class="scrap-count" aria-hidden="true">03<small>schools</small></span>
+          </div>
+
+          <ol class="edu-list" data-stagger>
+            <li class="edu-item" data-reveal>
+              <span class="edu-num">01</span>
+              <div class="edu-main">
+                <span class="edu-year">2015 — 2021</span>
+                <h3>SDN 1 Sidaharja</h3>
+                <p>Menempuh pendidikan dasar serta mulai mengenal teknologi dan komputer.</p>
+              </div>
+            </li>
+            <li class="edu-item" data-reveal>
+              <span class="edu-num">02</span>
+              <div class="edu-main">
+                <span class="edu-year">2021 — 2024</span>
+                <h3>SMPN 3 Lakbok</h3>
+                <p>Mengembangkan kemampuan akademik, organisasi, serta aktif mengikuti berbagai kegiatan sekolah.</p>
+              </div>
+            </li>
+            <li class="edu-item current" data-reveal>
+              <span class="edu-num">03</span>
+              <div class="edu-main">
+                <span class="edu-year">2024 — Sekarang <span class="pill">Current</span></span>
+                <h3>SMKN 3 Banjar</h3>
+                <p>Jurusan Rekayasa Perangkat Lunak. Fokus pada web development, UI design, dan basis data.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">tools i love</span>
+          <h2 class="sec-title">Skills &amp; <em>Tools</em></h2>
+          <p class="sec-desc">Tools dan teknologi yang saya gunakan untuk merancang serta membangun website.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <ul class="skill-tags" data-reveal>
+          <li>Front-End</li>
+          <li>UI Design</li>
+          <li>Responsive Web</li>
+          <li>Database</li>
+        </ul>
+
+        <div class="skills-cabinet" data-reveal>
+          <div class="cabinet-head">
+            <span class="cabinet-crest" aria-hidden="true">✦</span>
+            <div class="cabinet-copy">
+              <h3>The little toolkit</h3>
+              <p>Delapan alat yang saya pakai sehari-hari untuk merancang dan membangun web.</p>
+            </div>
+            <span class="cabinet-count" aria-hidden="true">08<span>tools</span></span>
+          </div>
+
+          <ul class="tool-grid">
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">&lt;/&gt;</span>
+              <span class="tool-name">HTML5</span>
+              <em>Structure</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">#</span>
+              <span class="tool-name">CSS3</span>
+              <em>Styling</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">{ }</span>
+              <span class="tool-name">JavaScript</span>
+              <em>Interactive</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">$</span>
+              <span class="tool-name">PHP</span>
+              <em>Backend</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.5" rx="7" ry="2.8"/><path d="M5 5.5v6c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-6"/><path d="M5 11.5v6c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-6"/></svg></span>
+              <span class="tool-name">MySQL</span>
+              <em>Database</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 36" width="14" height="21" fill="currentColor"><path d="M6 0h6v12H6a6 6 0 0 1 0-12Z" opacity=".55"/><path d="M12 0h6a6 6 0 1 1 0 12h-6V0Z" opacity=".85"/><path d="M6 12h6v12H6a6 6 0 0 1 0-12Z" opacity=".7"/><circle cx="18" cy="18" r="6" opacity=".95"/><path d="M6 24h6v6a6 6 0 1 1-6-6Z" opacity=".45"/></svg></span>
+              <span class="tool-name">Figma</span>
+              <em>UI Design</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">◐</span>
+              <span class="tool-name">Canva</span>
+              <em>Graphic Design</em>
+            </li>
+            <li class="tool">
+              <span class="tool-icon" aria-hidden="true">›_</span>
+              <span class="tool-name">VS Code</span>
+              <em>Code Editor</em>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section alt" id="projects">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">little creations</span>
+          <h2 class="sec-title">Selected <em>Projects</em></h2>
+          <p class="sec-desc">Kumpulan project desain dan pengembangan yang saya kerjakan.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <div class="project-gallery" data-reveal>
+          <div class="gallery-head">
+            <span class="gallery-crest" aria-hidden="true">✧</span>
+            <div class="gallery-copy">
+              <h3>From the little studio</h3>
+              <p>Empat karya yang saya rancang dan bangun dengan perhatian pada setiap detail kecil.</p>
+            </div>
+            <span class="gallery-count" aria-hidden="true">04<span>works</span></span>
+          </div>
+
+          <div class="gallery-grid" data-stagger>
+            <article class="project-page" data-reveal>
+              <figure class="media project-media" data-label="perpus.png">
+                <img src="assets/image/perpus.png" alt="Desain UI/UX aplikasi perpustakaan" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">01</span><span class="ph-name">perpus.png</span></span>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta"><span class="p-num">01</span><span class="p-type">UI/UX Design</span></div>
+                <h3>Aplikasi Perpustakaan</h3>
+                <p>Desain antarmuka aplikasi perpustakaan untuk pencarian dan peminjaman buku.</p>
+                <ul class="tags"><li>Figma</li><li>UI Design</li><li>Prototype</li></ul>
+              </div>
+            </article>
+
+            <article class="project-page" data-reveal>
+              <figure class="media project-media" data-label="access-internship.png">
+                <img src="assets/image/access.jpeg" alt="Desain UI/UX platform Access Internship" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">02</span><span class="ph-name">access-internship.png</span></span>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta"><span class="p-num">02</span><span class="p-type">UI/UX Design</span></div>
+                <h3>Access Internship</h3>
+                <p>Antarmuka platform magang yang membantu mahasiswa menemukan dan mengajukan peluang.</p>
+                <ul class="tags"><li>Figma</li><li>UI Design</li><li>Prototype</li></ul>
+              </div>
+            </article>
+
+            <article class="project-page" data-reveal>
+              <figure class="media project-media" data-label="apm.jpeg">
+                <img src="assets/image/apm.jpeg" alt="Tampilan aplikasi pengaduan masyarakat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">03</span><span class="ph-name">apm.jpeg</span></span>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta"><span class="p-num">03</span><span class="p-type">Web Application</span></div>
+                <h3>Pengaduan Masyarakat</h3>
+                <p>Aplikasi web pengaduan masyarakat dengan login dan pengelolaan data.</p>
+                <ul class="tags"><li>PHP</li><li>MySQL</li><li>Bootstrap</li></ul>
+              </div>
+            </article>
+
+            <article class="project-page" data-reveal>
+              <figure class="media project-media" data-label="panduan-pet-erp.png">
+                <img src="assets/image/pet erp.jpeg" alt="Panduan penggunaan sistem Pet ERP" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">04</span><span class="ph-name">panduan-pet-erp.png</span></span>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta"><span class="p-num">04</span><span class="p-type">Documentation</span></div>
+                <h3>Panduan Pet ERP</h3>
+                <p>Panduan penggunaan sistem ERP untuk membantu petugas bekerja lebih cepat dan rapi.</p>
+                <ul class="tags"><li>Figma</li><li>UI Design</li><li>Guide</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENT -->
+    <section class="section" id="achievement">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">moments to cherish</span>
+          <h2 class="sec-title"><em>Achievement</em></h2>
+          <p class="sec-desc">Penghargaan dan pencapaian yang menjadi bagian dari perjalanan saya.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <div class="award-binder" data-reveal>
+          <div class="binder-spine" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="binder-head">
+            <span class="binder-mark" aria-hidden="true">✦</span>
+            <div class="binder-copy">
+              <span class="binder-kicker">my little trophy shelf</span>
+              <h3>Pages of pride</h3>
+            </div>
+            <span class="binder-count" aria-hidden="true">02<small>moments</small></span>
+          </div>
+
+          <div class="binder-pages">
+            <article class="award-page">
+              <figure class="media award-media" data-label="pai.jpeg">
+                <img src="assets/image/pai.jpeg" alt="Piagam Juara Harapan 1 Debate PAI tingkat Provinsi Jawa Barat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">2025</span><span class="ph-name">pai.jpeg</span></span>
+              </figure>
+              <div class="award-body">
+                <span class="award-year">2025</span>
+                <h3>Juara Harapan 1 Debate PAI</h3>
+                <p>Tingkat Provinsi Jawa Barat.</p>
+              </div>
+            </article>
+
+            <article class="award-page">
+              <figure class="media award-media" data-label="mokaa.jpeg">
+                <img src="assets/image/n.jpeg" alt="Dokumentasi Terpilih Sebagai Mojang Kameumeut" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">2026</span><span class="ph-name">mokaa.jpeg</span></span>
+              </figure>
+              <div class="award-body">
+                <span class="award-year">2026</span>
+                <h3>Terpilih Sebagai Mojang Kameumeut</h3>
+                <p>Pasanggiri Mojang Jajaka Kota Banjar 2026.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZATION -->
+    <section class="section alt" id="organization">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <span class="sec-kicker">clubs &amp; communities</span>
+          <h2 class="sec-title">Organization &amp; <em>Community</em></h2>
+          <p class="sec-desc">Tempat saya belajar tumbuh di luar kelas — dari budaya, komunikasi, sampai kerja sama tim.</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        </header>
+
+        <div class="org-board" data-reveal>
+          <div class="board-head">
+            <span class="board-crest" aria-hidden="true">✦</span>
+            <div class="board-copy">
+              <h3>People &amp; places</h3>
+              <p>Ruang tumbuh di luar kelas yang ikut membentuk cara saya bekerja.</p>
+            </div>
+            <span class="board-count" aria-hidden="true">02<small>groups</small></span>
+          </div>
+
+          <div class="org-grid" data-stagger>
+            <article class="org-card org-feature" data-reveal>
+              <figure class="media org-media" data-label="mokaa.jpeg">
+                <img src="assets/image/pamoka.jpeg" alt="Dokumentasi Paguyuban Mojang Jajaka Kota Banjar" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">MOJANG</span><span class="ph-name">mokaa.jpeg</span></span>
+              </figure>
+              <div class="org-body">
+                <div class="org-top">
+                  <span class="org-crest" aria-hidden="true">✦</span>
+                  <span class="org-badge">2026 · Kota Banjar</span>
+                </div>
+                <h3>Paguyuban Mojang Jajaka Kota Banjar</h3>
+                <p class="org-role">Mojang Kameumeut 2026</p>
+                <p class="org-desc">Terpilih sebagai Mojang Kameumeut pada Pasanggiri Mojang Jajaka Kota Banjar 2026. Aktif melestarikan budaya Sunda, melatih public speaking, kepercayaan diri, serta kemampuan berkomunikasi di depan publik.</p>
+                <ul class="tags"><li>Public Speaking</li><li>Budaya Sunda</li><li>Leadership</li><li>Kepercayaan Diri</li></ul>
+              </div>
+            </article>
+
+            <article class="org-card" data-reveal>
+              <figure class="media org-media" data-label="tefaaa.jpeg">
+                <img src="assets/image/tefaa.jpeg" alt="Kegiatan organisasi dan Teaching Factory Neng Tika Adianti" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <span class="media-ph" aria-hidden="true"><span class="ph-mark">TEFA</span><span class="ph-name">tefaaa.jpeg</span></span>
+              </figure>
+              <div class="org-body">
+                <div class="org-top">
+                  <span class="org-crest" aria-hidden="true">✧</span>
+                  <span class="org-badge">TEFA</span>
+                </div>
+                <h3>Teaching Factory</h3>
+                <p class="org-role">Active Member · SMKN 3 Banjar</p>
+                <p class="org-desc">Aktif mengikuti kegiatan organisasi sekolah serta Teaching Factory (TEFA) untuk meningkatkan komunikasi, kepemimpinan, kerja sama tim, serta penyelesaian project secara kolaboratif.</p>
+                <ul class="tags"><li>Kerja Tim</li><li>Komunikasi</li><li>Problem Solving</li><li>Kreativitas</li></ul>
+              </div>
+            </article>
+          </div>
+
+          <ul class="org-skills" data-reveal>
+            <li><span aria-hidden="true">✦</span>Leadership</li>
+            <li><span aria-hidden="true">✦</span>Teamwork</li>
+            <li><span aria-hidden="true">✦</span>Communication</li>
+            <li><span aria-hidden="true">✦</span>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <header class="contact-head" data-reveal>
+          <span class="sec-kicker">let's keep in touch</span>
+          <h2 class="contact-title">Let's create <em>something</em> meaningful.</h2>
+          <p class="sec-desc">Terbuka untuk kolaborasi project, magang, maupun sekadar berdiskusi tentang web dan desain. Pilih kanal yang paling nyaman untuk menghubungi saya.</p>
+        </header>
+
+        <div class="contact-grid" data-stagger>
+          <a class="contact-card" href="https://wa.me/6282315835606" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8a9.2 9.2 0 0 0-7.9 13.9L3 21l4.5-1.1A9.2 9.2 0 1 0 12 2.8Z"/><path d="M8.7 7.6c-.3 0-.6.1-.8.4-.7.8-.8 1.7-.4 2.7.5 1.4 1.4 2.6 2.6 3.5.9.6 1.8.9 2.7.8.5-.1.9-.4 1.1-.9l.2-.7c0-.2-.1-.3-.2-.4l-1.2-.6c-.2-.1-.3 0-.4.1l-.4.5c-.1.2-.3.2-.4.1-.6-.3-1.1-.7-1.5-1.2-.3-.4-.6-.8-.7-1.2 0-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3 0-.5l-.5-1.1c-.1-.2-.2-.3-.4-.3Z"/></svg></span>
+            <span class="c-label">WhatsApp</span><span class="c-value">+62 823-1583-5606</span>
+          </a>
+          <a class="contact-card" href="mailto:nengtikaadyy_@gmail.com" data-reveal>
+            <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m4.5 7.5 7.5 5.4 7.5-5.4"/></svg></span>
+            <span class="c-label">Email</span><span class="c-value">nengtikaadyy_@gmail.com</span>
+          </a>
+          <a class="contact-card" href="https://github.com/nengtikaa14" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></span>
+            <span class="c-label">GitHub</span><span class="c-value">@nengtikaa14</span>
+          </a>
+          <a class="contact-card" href="https://instagram.com/nengtikaadyy" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg></span>
+            <span class="c-label">Instagram</span><span class="c-value">@nengtikaadyy</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Neng Tika Adianti</p>
+      <p class="footer-note">Designed &amp; built with a little magic ✦</p>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" data-to-top aria-label="Kembali ke atas" title="Kembali ke atas">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
