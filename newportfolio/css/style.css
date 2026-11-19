@@ -1507,18 +1507,6 @@ body.nav-open { overflow: hidden; }
   .board-copy h3 { font-size: 1.2rem; }
   .board-count { font-size: 1.3rem; }
   .org-card { padding: 0.9rem 0.6rem; }
-  .edu-scrapbook { padding: clamp(0.95rem, 2.4vw, 1.35rem); }
-  .scrap-head { gap: 0.6rem; padding-bottom: 0.8rem; }
-  .scrap-crest { width: 36px; height: 36px; font-size: 0.9rem; }
-  .scrap-kicker { font-size: 0.88rem; }
-  .scrap-copy h3 { font-size: 1.2rem; }
-  .scrap-count { font-size: 1.3rem; }
-  .edu-item { padding: 0.85rem 0.55rem; gap: 0.5rem; }
-  .edu-num { width: 36px; height: 36px; font-size: 1rem; }
-  .edu-year { font-size: 0.6rem; letter-spacing: 0.06em; }
-  .edu-main h3 { font-size: 0.95rem; line-height: 1.25; }
-  .edu-main p { font-size: 0.72rem; line-height: 1.5; }
-  .pill { font-size: 0.52rem; padding: 0.15rem 0.4rem; }
 }
 
 @media (max-width: 640px) {
@@ -1580,18 +1568,6 @@ body.nav-open { overflow: hidden; }
   .info-list div { flex-direction: row; align-items: baseline; gap: 0.75rem; padding: 0.6rem 0; }
   .info-list dt { font-size: 0.74rem; }
   .info-list dd { font-size: 0.82rem; text-align: right; }
-
-  /* Education — 3 columns preserved, each column gets more usable width */
-  .scrap-count { padding: 0.2rem 0.4rem 0.24rem; border-radius: 12px 12px 4px 4px; font-size: 1rem; }
-  .scrap-count small { font-size: 0.44rem; }
-  .edu-item { padding: 0.8rem 0.4rem; gap: 0.5rem; }
-  .edu-item.current .edu-num { box-shadow: 0 0 0 3px var(--accent-soft); }
-  .edu-num { width: 30px; height: 30px; font-size: 0.9rem; }
-  .edu-year { font-size: 0.6rem; letter-spacing: 0.04em; }
-  .edu-main h3 { font-size: 0.82rem; line-height: 1.3; }
-  .edu-main h3::after { width: 18px; margin-top: 0.3rem; }
-  .edu-main p { font-size: 0.7rem; line-height: 1.5; }
-  .pill { font-size: 0.5rem; padding: 0.15rem 0.3rem; }
 
   /* Skills — larger tool cards */
   .skill-tags { gap: 0.5rem; margin-bottom: 1rem; }
@@ -1669,6 +1645,115 @@ body.nav-open { overflow: hidden; }
   .footer-note { text-align: center; }
 }
 
+/* ---------- Learning Path — editorial timeline (mobile only) ---------- */
+@media (max-width: 640px) {
+  .edu-scrapbook {
+    padding: 1.15rem 1rem 1.2rem;
+    border-radius: 20px;
+    background:
+      radial-gradient(120% 80% at 100% 0%, var(--pink-soft), transparent 62%),
+      linear-gradient(160deg, var(--surface), var(--surface-2));
+    box-shadow: var(--shadow-soft);
+  }
+  .edu-scrapbook::before,
+  .edu-scrapbook::after,
+  .edu-main::after,
+  .edu-year::before { content: none; display: none; }
+
+  .scrap-head {
+    gap: 0.7rem;
+    margin-left: 0;
+    padding: 0 0 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .scrap-crest {
+    width: 36px; height: 36px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--accent-soft);
+    color: var(--accent-deep); font-size: 0.9rem;
+  }
+  .scrap-kicker {
+    display: block; margin-bottom: 0.15rem;
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    line-height: 1.2; color: var(--faint);
+  }
+  .scrap-copy h3 { font-size: 1.3rem; line-height: 1.2; }
+  .scrap-count {
+    margin-left: auto; padding: 0.35rem 0.55rem;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: var(--accent-soft);
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    line-height: 1; color: var(--accent-deep); text-align: center;
+    transform: none;
+  }
+  .scrap-count small { margin-top: 0.18rem; font-size: 0.5rem; letter-spacing: 0.12em; }
+
+  .edu-list {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+  .edu-list::before { content: none; display: none; }
+  .edu-item::before {
+    content: "";
+    position: absolute;
+    top: 34px; bottom: -34px; left: 17px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--line-strong), var(--line));
+  }
+  .edu-item:last-child::before { content: none; display: none; }
+  .edu-item,
+  .edu-item:nth-child(3n),
+  .edu-item:nth-last-child(-n + 3) {
+    flex-direction: row; align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .edu-item:first-child { padding-top: 1rem; }
+  .edu-item:last-child { padding-bottom: 0.4rem; }
+  .edu-item:hover,
+  .edu-item.current { background: none; box-shadow: none; }
+
+  .edu-num {
+    position: relative; z-index: 1; flex: none;
+    width: 36px; height: 36px;
+    border: 1px solid var(--line-strong); border-radius: 50%;
+    background: var(--surface); box-shadow: none;
+    font-family: var(--sans); font-style: normal;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+    color: var(--faint);
+  }
+  .edu-item.current .edu-num {
+    border-color: var(--accent);
+    background: var(--accent-deep); color: #fff;
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  :root[data-theme="dark"] .edu-item.current .edu-num { color: #241831; }
+
+  .edu-main { flex: 1 1 auto; min-width: 0; padding: 0.05rem 0 0; }
+  .edu-year {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 0.35rem 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--accent-deep);
+  }
+  .edu-main h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.15rem; line-height: 1.3;
+    color: var(--text);
+  }
+  .edu-item.current .edu-main h3 { color: var(--text); }
+  .edu-main p {
+    font-size: 0.9rem; line-height: 1.65;
+    color: var(--muted);
+  }
+  .pill { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.2rem 0.52rem; }
+}
+
 @media (max-width: 480px) {
   .contact-grid { grid-template-columns: 1fr; }
   .contact-card {
@@ -1708,10 +1793,10 @@ body.nav-open { overflow: hidden; }
   .tool-name { font-size: 0.82rem; }
   .tool em { font-size: 0.58rem; }
   .portrait-frame { width: min(84vw, 260px); }
-  .edu-item { padding: 0.7rem 0.3rem; }
-  .edu-num { width: 28px; height: 28px; }
-  .edu-main h3 { font-size: 0.78rem; }
-  .edu-main p { font-size: 0.66rem; }
+  .edu-num { width: 34px; height: 34px; }
+  .edu-item::before { left: 16px; top: 33px; bottom: -33px; }
+  .edu-main h3 { font-size: 1.1rem; }
+  .edu-main p { font-size: 0.85rem; }
   .binder-pages { gap: 0.8rem; }
   .award-body h3 { font-size: 0.94rem; }
   .org-desc { font-size: 0.76rem; }
