@@ -22,7 +22,7 @@
       themeToggle.setAttribute('title', theme === 'light' ? 'Mode gelap' : 'Mode terang');
     }
     if (themeColorMeta) {
-      themeColorMeta.setAttribute('content', theme === 'light' ? '#F7F2F8' : '#15101D');
+      themeColorMeta.setAttribute('content', theme === 'light' ? '#fdfbff' : '#15101d');
     }
   }
 
@@ -156,7 +156,7 @@
 
       navLinks.forEach(function (link) {
         if (link.getAttribute('href') === '#' + current) {
-          link.setAttribute('aria-current', 'true');
+          link.setAttribute('aria-current', 'location');
         } else {
           link.removeAttribute('aria-current');
         }

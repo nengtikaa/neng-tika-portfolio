@@ -5,31 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neng Tika Adianti — Student, Web Developer &amp; UI Designer</title>
   <meta name="description" content="Portfolio pribadi Neng Tika Adianti, siswi Rekayasa Perangkat Lunak SMKN 3 Banjar. Web development, UI design, dan project digital." />
-  <meta name="theme-color" content="#F7F2F8" id="theme-color" />
-  <meta property="og:title" content="Neng Tika Adianti — Portfolio" />
+  <meta name="theme-color" content="#fdfbff" id="theme-color" />
+  <meta property="og:title" content="Neng Tika Adianti — Student, Web Developer &amp; UI Designer" />
   <meta property="og:description" content="Student • Web Developer • UI Designer. Rekayasa Perangkat Lunak Student di SMKN 3 Banjar." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nengtikaadyy.my.id/" />
+  <meta property="og:site_name" content="Neng Tika Adianti" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:image" content="https://nengtikaadyy.my.id/assets/image/neng.png" />
+  <meta property="og:image:alt" content="Foto profil Neng Tika Adianti" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Neng Tika Adianti — Student, Web Developer &amp; UI Designer" />
+  <meta name="twitter:description" content="Student • Web Developer • UI Designer. Rekayasa Perangkat Lunak Student di SMKN 3 Banjar." />
+  <meta name="twitter:image" content="https://nengtikaadyy.my.id/assets/image/neng.png" />
+  <link rel="canonical" href="https://nengtikaadyy.my.id/" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2315101d'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' font-style='italic' text-anchor='middle' fill='%23b99ad1'%3EN%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Dancing+Script:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/image/neng.webp" type="image/webp" fetchpriority="high" />
 
   <script>
     (function () {
       var root = document.documentElement;
-      root.classList.add('js');
       var theme = 'light';
       try {
         var saved = localStorage.getItem('nta-theme');
-        theme = saved || 'light';
+        theme = saved === 'dark' || saved === 'light' ? saved : 'light';
       } catch (error) {
         theme = 'light';
       }
       root.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', theme === 'light' ? '#F7F2F8' : '#15101D');
+      if (meta) meta.setAttribute('content', theme === 'light' ? '#fdfbff' : '#15101d');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        root.classList.add('js');
+      }
     })();
   </script>
 
@@ -111,7 +124,10 @@
           <div class="hero-visual">
             <div class="portrait-frame">
               <figure class="media portrait" data-label="neng.jpeg">
-                <img src="assets/image/neng.png" alt="Foto profil Neng Tika Adianti" fetchpriority="high" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/neng.webp" type="image/webp" />
+                  <img src="assets/image/neng.png" width="900" height="1130" alt="Foto profil Neng Tika Adianti" fetchpriority="high" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">NTA</span><span class="ph-name">neng.jpeg</span></span>
               </figure>
             </div>
@@ -305,7 +321,10 @@
           <div class="gallery-grid" data-stagger>
             <article class="project-page" data-reveal>
               <figure class="media project-media" data-label="perpus.png">
-                <img src="assets/image/perpus.png" alt="Desain UI/UX aplikasi perpustakaan" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/perpus.webp" type="image/webp" />
+                  <img src="assets/image/perpus.png" width="633" height="423" alt="Desain UI/UX aplikasi perpustakaan" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">01</span><span class="ph-name">perpus.png</span></span>
               </figure>
               <div class="project-body">
@@ -318,7 +337,10 @@
 
             <article class="project-page" data-reveal>
               <figure class="media project-media" data-label="access-internship.png">
-                <img src="assets/image/access.jpeg" alt="Desain UI/UX platform Access Internship" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/access.webp" type="image/webp" />
+                  <img src="assets/image/access.jpeg" width="900" height="458" alt="Desain UI/UX platform Access Internship" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">02</span><span class="ph-name">access-internship.png</span></span>
               </figure>
               <div class="project-body">
@@ -331,7 +353,10 @@
 
             <article class="project-page" data-reveal>
               <figure class="media project-media" data-label="apm.jpeg">
-                <img src="assets/image/apm.jpeg" alt="Tampilan aplikasi pengaduan masyarakat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/apm.webp" type="image/webp" />
+                  <img src="assets/image/apm.jpeg" width="900" height="421" alt="Tampilan aplikasi pengaduan masyarakat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">03</span><span class="ph-name">apm.jpeg</span></span>
               </figure>
               <div class="project-body">
@@ -344,7 +369,10 @@
 
             <article class="project-page" data-reveal>
               <figure class="media project-media" data-label="panduan-pet-erp.png">
-                <img src="assets/image/pet erp.jpeg" alt="Panduan penggunaan sistem Pet ERP" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/pet%20erp.webp" type="image/webp" />
+                  <img src="assets/image/pet erp.jpeg" width="900" height="443" alt="Panduan penggunaan sistem Pet ERP" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">04</span><span class="ph-name">panduan-pet-erp.png</span></span>
               </figure>
               <div class="project-body">
@@ -383,7 +411,10 @@
           <div class="binder-pages">
             <article class="award-page">
               <figure class="media award-media" data-label="pai.jpeg">
-                <img src="assets/image/pai.jpeg" alt="Piagam Juara Harapan 1 Debate PAI tingkat Provinsi Jawa Barat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/pai.webp" type="image/webp" />
+                  <img src="assets/image/pai.jpeg" width="900" height="675" alt="Piagam Juara Harapan 1 Debate PAI tingkat Provinsi Jawa Barat" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">2025</span><span class="ph-name">pai.jpeg</span></span>
               </figure>
               <div class="award-body">
@@ -395,7 +426,10 @@
 
             <article class="award-page">
               <figure class="media award-media" data-label="mokaa.jpeg">
-                <img src="assets/image/n.jpeg" alt="Dokumentasi Terpilih Sebagai Mojang Kameumeut" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/n.webp" type="image/webp" />
+                  <img src="assets/image/n.jpeg" width="800" height="979" alt="Dokumentasi Terpilih Sebagai Mojang Kameumeut" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">2026</span><span class="ph-name">mokaa.jpeg</span></span>
               </figure>
               <div class="award-body">
@@ -432,7 +466,10 @@
           <div class="org-grid" data-stagger>
             <article class="org-card org-feature" data-reveal>
               <figure class="media org-media" data-label="mokaa.jpeg">
-                <img src="assets/image/pamoka.jpeg" alt="Dokumentasi Paguyuban Mojang Jajaka Kota Banjar" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/pamoka.webp" type="image/webp" />
+                  <img src="assets/image/pamoka.jpeg" width="900" height="600" alt="Dokumentasi Paguyuban Mojang Jajaka Kota Banjar" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">MOJANG</span><span class="ph-name">mokaa.jpeg</span></span>
               </figure>
               <div class="org-body">
@@ -449,7 +486,10 @@
 
             <article class="org-card" data-reveal>
               <figure class="media org-media" data-label="tefaaa.jpeg">
-                <img src="assets/image/tefaa.jpeg" alt="Kegiatan organisasi dan Teaching Factory Neng Tika Adianti" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                <picture>
+                  <source srcset="assets/image/tefaa.webp" type="image/webp" />
+                  <img src="assets/image/tefaa.jpeg" width="900" height="613" alt="Kegiatan organisasi dan Teaching Factory Neng Tika Adianti" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('is-missing')" />
+                </picture>
                 <span class="media-ph" aria-hidden="true"><span class="ph-mark">TEFA</span><span class="ph-name">tefaaa.jpeg</span></span>
               </figure>
               <div class="org-body">
